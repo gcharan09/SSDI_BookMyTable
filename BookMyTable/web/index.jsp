@@ -33,6 +33,7 @@
         <input type="hidden" value="TakeAway" name="action"/>
         <input type="submit" value="Take Away" />
     </form>
+    
 </div>
     
 </div>

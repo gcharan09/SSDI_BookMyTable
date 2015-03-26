@@ -6,6 +6,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="header.jsp" %>
+
 <div>
 <div class="navigate">
     <div id="navdiv">
@@ -24,7 +25,23 @@
 </div>
 <div class="bodymain">
     <h1>"Dine in page !!"</h1>
-    
+    <p>Please select Date and time:</p>
+    <form actiopn="DiningController">
+    <input type="text" name="date17" value="">
+			<script type="text/javascript">
+				$(function(){
+					$('*[name=date17]').appendDtpicker({
+						"inline": true,
+						"futureOnly": true,
+						"minTime":"09:00",
+						"maxTime":"22:00",
+                                                "maxDate":"+1M"
+					});
+				});
+			</script>
+    <input type="hidden" name="action" value="dateAndTime">
+    <input type="submit" value="submit" />
+    </form>
 </div>
     
 </div>
