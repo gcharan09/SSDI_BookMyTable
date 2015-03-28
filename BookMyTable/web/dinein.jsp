@@ -26,7 +26,7 @@
 <div class="bodymain">
     <h1>"Dine in page !!"</h1>
     <p>Please select Date and time:</p>
-    <form actiopn="DiningController">
+    <form action="menu.jsp">
     <input type="text" name="date17" value="">
 			<script type="text/javascript">
 				$(function(){

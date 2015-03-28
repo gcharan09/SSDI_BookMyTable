@@ -4,9 +4,25 @@
         <servlet-name>DiningController</servlet-name>
         <servlet-class>Controller.DiningController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MenuController</servlet-name>
+        <servlet-class>Controller.MenuController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConfirmationController</servlet-name>
+        <servlet-class>Controller.ConfirmationController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DiningController</servlet-name>
         <url-pattern>/DiningController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MenuController</servlet-name>
+        <url-pattern>/MenuController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConfirmationController</servlet-name>
+        <url-pattern>/ConfirmationController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
