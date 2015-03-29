@@ -16,8 +16,8 @@
 <div>
 <div class="body">
     <div class="leftbody">
-        <a id="current" href="home.jsp">Home</a> <br />
-        <a href="catalog">Catalog</a> <br />
+        <a id="current" href="home.jsp">Log in</a> <br />
+        <a href="catalog">Sign Up</a> <br />
         <a href="about.jsp">About</a> <br />
         <a href="contactUs.jsp">Contact Us</a> <br />
     </div>
@@ -56,7 +56,8 @@
         <c:forEach var="c" items="${selectedMenu}">
             ${c}<br/>
         </c:forEach> 
-          
+            <br/> <a href="menu.jsp">Click here to edit menu</a>
+            <br/> <a href="dinein.jsp">Click here to edit Time and date</a>
     </div>
 </div>
     

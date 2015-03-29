@@ -16,21 +16,14 @@
 <div>
 <div class="body">
     <div class="leftbody">
-        <a id="current" href="home.jsp">Home</a> <br />
-        <a href="catalog">Catalog</a> <br />
+        <a id="current" href="home.jsp">Log in</a> <br />
+        <a href="catalog">Sign Up</a> <br />
         <a href="about.jsp">About</a> <br />
         <a href="contactUs.jsp">Contact Us</a> <br />
     </div>
 </div>
 <div class="bodymain">
-    <form action="" method="POST">
-        <input type="hidden" value="DineIn" name="action"/>
-        <input type="submit" value="Sign up" />
-    </form>
-    <form action="" method="POST">
-        <input type="hidden" value="DineIn" name="action"/>
-        <input type="submit" value="Log in" />
-    </form>
+    
     <h1>"Dine in or Take away !!"</h1>
     <form action="DiningController" method="POST">
         <input type="hidden" value="DineIn" name="action"/>

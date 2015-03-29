@@ -59,7 +59,7 @@ public class MenuController extends HttpServlet {
         String url = "/menu.jsp";
         String[] attribute = request.getParameterValues("menuItems");
         if(attribute != null){
-            request.setAttribute("selectedMenu", attribute);
+            request.getSession().setAttribute("selectedMenu", attribute);
         }
         if(request.getParameter("confirm") != null){
             String action = (String) request.getParameter("confirm");

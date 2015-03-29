@@ -16,14 +16,15 @@
 <div>
 <div class="body">
     <div class="leftbody">
-        <a id="current" href="home.jsp">Home</a> <br />
-        <a href="catalog">Catalog</a> <br />
+        <a id="current" href="home.jsp">Log in</a> <br />
+        <a href="catalog">Sign Up</a> <br />
         <a href="about.jsp">About</a> <br />
         <a href="contactUs.jsp">Contact Us</a> <br />
     </div>
 </div>
 <div class="bodymain">
     <div style="float: left">
+        <a href="DiningController?action=DineIn"><<= Click here to change date and time </a>
     <h1>"Select Menu!!"</h1>
     <form action="MenuController" method="POST">
     <input type="checkbox" name="menuItems" value="Salad" />Salad <br/>
