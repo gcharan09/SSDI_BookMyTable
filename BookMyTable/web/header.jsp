@@ -23,10 +23,18 @@
   
     </head>
     <body>
+<<<<<<< HEAD
         <div class="container" style="background-image: url(images/Restaurant.jpg) ">
             <div class="outer">
                 <div class="head">
                     <div id="title">
+=======
+        <div class="container">
+            <div class="outer">
+                <div class="head">
+                    <div id="title">
+                        <img src="images/AppLogo.jpg" alt="image" width="100" height="80" />
+>>>>>>> origin/master
                         <h2 id="stationary">Open Table</h2>
                     </div>
                     
