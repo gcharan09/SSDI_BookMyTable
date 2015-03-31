@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : menu
     Created on : Mar 26, 2015, 3:20:53 PM
@@ -25,13 +26,13 @@
 <div class="bodymain">
     <div style="float: left">
         <a href="DiningController?action=DineIn"><<= Click here to change date and time </a>
-    <h1>"Select Menu!!"</h1>
+    <h1>"Select Food Items!!"</h1>
     <form action="MenuController" method="POST">
-    <input type="checkbox" name="menuItems" value="Salad" />Salad <br/>
-    <input type="checkbox" name="menuItems" value="Soup" />Soup <br/>
-    <input type="checkbox" name="menuItems" value="SoftDrink" />Soft drink <br/>
-    <input type="checkbox" name="menuItems" value="Manchuria" />Manchuria <br/>
-    <input type="checkbox" name="menuItems" value="ChilliPanner" />Chilli panner <br/>
+    <input type="checkbox" name="menuItems" value="Salad" />Salads <br/>
+    <input type="checkbox" name="menuItems" value="Soup" />Soups <br/>
+    <input type="checkbox" name="menuItems" value="SoftDrink" />Drinks <br/>
+    <input type="checkbox" name="menuItems" value="Manchuria" />Chinese <br/>
+    <input type="checkbox" name="menuItems" value="ChilliPanner" />Indian<br/>
     
     <input type="submit" value="Update Menu" name="update" />
     
@@ -44,7 +45,7 @@
     
     <div style="float: left; margin-left: 50px; margin-top: 20px; border: 1px solid black;">
         
-        <h3>Selected menu:</h3>
+        <h3>Selected Items</h3>
         <c:forEach var="c" items="${selectedMenu}">
             ${c}<br/>
         </c:forEach> 

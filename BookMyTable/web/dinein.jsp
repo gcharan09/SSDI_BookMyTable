@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : dinein
     Created on : Mar 23, 2015, 7:15:17 PM
@@ -17,13 +18,8 @@
 <div>
 <div class="body">
     <div class="leftbody">
-<<<<<<< HEAD
         <a id="current" href="home.jsp">Log in</a> <br />
         <a href="catalog">Sign Up</a> <br />
-=======
-        <a id="current" href="home.jsp">Home</a> <br />
-        <a href="catalog">Catalog</a> <br />
->>>>>>> origin/master
         <a href="about.jsp">About</a> <br />
         <a href="contactUs.jsp">Contact Us</a> <br />
     </div>
@@ -31,11 +27,7 @@
 <div class="bodymain">
     <h1>"Dine in page !!"</h1>
     <p>Please select Date and time:</p>
-<<<<<<< HEAD
     <form action="menu.jsp">
-=======
-    <form actiopn="DiningController">
->>>>>>> origin/master
     <input type="text" name="date17" value="">
 			<script type="text/javascript">
 				$(function(){

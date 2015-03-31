@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : index
     Created on : Feb 23, 2015, 10:15:40 AM
@@ -16,22 +17,14 @@
 <div>
 <div class="body">
     <div class="leftbody">
-<<<<<<< HEAD
         <a id="current" href="home.jsp">Log in</a> <br />
         <a href="catalog">Sign Up</a> <br />
-=======
-        <a id="current" href="home.jsp">Home</a> <br />
-        <a href="catalog">Catalog</a> <br />
->>>>>>> origin/master
         <a href="about.jsp">About</a> <br />
         <a href="contactUs.jsp">Contact Us</a> <br />
     </div>
 </div>
 <div class="bodymain">
-<<<<<<< HEAD
     
-=======
->>>>>>> origin/master
     <h1>"Dine in or Take away !!"</h1>
     <form action="DiningController" method="POST">
         <input type="hidden" value="DineIn" name="action"/>
