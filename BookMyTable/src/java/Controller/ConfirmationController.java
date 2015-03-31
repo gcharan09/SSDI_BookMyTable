@@ -127,7 +127,7 @@ public class ConfirmationController extends HttpServlet {
                     + "link: http://localhost:8084/BookMyTable/ConfirmationController?verificationcode="+rand+""
                     + "\n\nThis is an auto generated mail.Please do not reply.\n\nThank you");
             mc.sendMail();
-            request.setAttribute("message", "Please check your gmail for confirmation.");
+            request.setAttribute("message", "Please check your email for confirmation.");
             getServletContext()
                 .getRequestDispatcher("/success.jsp")
                 .forward(request, response);
