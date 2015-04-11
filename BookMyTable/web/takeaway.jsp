@@ -17,8 +17,8 @@
 <div>
 <div class="body">
     <div class="leftbody">
-        <a id="current" href="home.jsp">Log in</a> <br />
-        <a href="catalog">Sign Up</a> <br />
+        <a id="current" href="SignInController?action=loginPage">Log in</a> <br />
+        <a href="SignInController?action=signupPage">Sign Up</a> <br />
         <a href="about.jsp">About</a> <br />
         <a href="contactUs.jsp">Contact Us</a> <br />
     </div>

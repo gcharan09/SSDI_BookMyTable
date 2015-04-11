@@ -17,8 +17,8 @@
 <div>
 <div class="body">
     <div class="leftbody">
-        <a id="current" href="home.jsp">Log in</a> <br />
-        <a href="catalog">Sign Up</a> <br />
+        <a id="current" href="SignInController?action=loginPage">Log in</a> <br />
+        <a href="SignInController?action=signupPage">Sign Up</a> <br />
         <a href="about.jsp">About</a> <br />
         <a href="contactUs.jsp">Contact Us</a> <br />
     </div>
@@ -28,6 +28,7 @@
     <h1>"Select Menu!!"</h1>
     <form action="ConfirmationController" method="POST">
         <table>
+            <c:if test="${sessionScope.typeOfUser != 'RegisteredUser'}">
             <tr>
                 <td>Enter email id:</td>
                 <td> <input type="text" name="emailId" value="" size="50" /> </td>
@@ -36,6 +37,7 @@
                 <td>Enter name of the person:</td>
                 <td> <input type="text" name="Nameofperson" value="" size="50" /> </td>
             </tr>
+            </c:if>
             <tr>
                 <td>Number of attendees:</td>
                 <td> <input type="text" name="attendees" value="" size="10" /> </td>

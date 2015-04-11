@@ -12,6 +12,10 @@
         <servlet-name>ConfirmationController</servlet-name>
         <servlet-class>Controller.ConfirmationController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SignInController</servlet-name>
+        <servlet-class>Controller.SignInController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DiningController</servlet-name>
         <url-pattern>/DiningController</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>ConfirmationController</servlet-name>
         <url-pattern>/ConfirmationController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignInController</servlet-name>
+        <url-pattern>/SignInController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -7,13 +7,23 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
 /**
  *
  * @author SRINEAL
  */
+@Entity
 public class GuestUser {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    int ID;
+    
     private String name, email, date, time, randNumber;
     private int atttendees;
 
