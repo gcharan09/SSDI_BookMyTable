@@ -26,6 +26,23 @@
 <div class="bodymain">
     <h3>"${message}"</h3>
     
+    <c:if test="${displayMenu == 'true'}">
+        <h3>Menu Selected</h3> <br/>
+        <table>
+            <tr>
+                <th>Menu</th>
+                <th>Quantity</th>
+            </tr>
+        <c:forEach var="item" items="${menuDetails}">
+                <tr>
+                    <td>${item.menu}</td>
+                    <td>${item.quantity}</td>
+                </tr>
+            
+        </c:forEach>
+        </table>
+    </c:if>
+
 </div>
     
 </div>

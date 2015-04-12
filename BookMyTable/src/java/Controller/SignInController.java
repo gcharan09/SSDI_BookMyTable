@@ -68,7 +68,7 @@ public class SignInController extends HttpServlet {
         String email, firstName, lastName, password, confirmPassword, phoneNumber;
         String action = request.getParameter("action");
         String url = "/signin.jsp";
-        
+      
         if(action.equals("signupPage")){
             request.setAttribute("signType", "signup");
             request.setAttribute("message", "Welcome to SignUp page");
@@ -107,6 +107,7 @@ public class SignInController extends HttpServlet {
             if(userByEmail != null){
                 if(userByEmail.getPassword().equals(password)){
                     request.getSession().setAttribute("typeOfUser", "RegisteredUser");
+                    request.getSession().setAttribute("registeredUserEmail", email);
                     url = "/dinein.jsp";
                 }
             }else{

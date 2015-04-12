@@ -12,6 +12,7 @@
         <title>Open Table</title>
         
         <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/jquery.timepicker.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <link type="text/css" href="styles/jquery.simple-dtpicker.css" rel="stylesheet" />
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -19,6 +20,7 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	
 	<script type="text/javascript" src="jquery.simple-dtpicker.js"></script>
+        <script type="text/javascript" src="jquery.timepicker.js"></script>
 	
   
   

@@ -28,17 +28,25 @@
     <h1>"Dine in page !!"</h1>
     <p>Please select Date and time:</p>
     <form action="menu.jsp">
-    <input type="text" name="date17" value="">
+    <input type="text" name="date17" id="scrollDefaultExample" value="">
 			<script type="text/javascript">
-				$(function(){
+                            <c:if test="${sessionScope.typeOfUser != 'RegisteredUser'}">
+				$('#scrollDefaultExample').timepicker({ 
+                                    'minTime': '9:00am',
+                                    'maxTime': '11:30pm',
+                                    'scrollDefault': 'now'
+                                });
+                            </c:if>
+                            <c:if test="${sessionScope.typeOfUser == 'RegisteredUser'}">
+                                $(function(){
 					$('*[name=date17]').appendDtpicker({
 						"inline": true,
 						"futureOnly": true,
 						"minTime":"09:00",
-						"maxTime":"22:00",
-                                                "maxDate":"+1M"
+						"maxTime":"22:00"
 					});
 				});
+                            </c:if>
 			</script>
     <input type="hidden" name="action" value="dateAndTime">
     <input type="submit" value="submit" />

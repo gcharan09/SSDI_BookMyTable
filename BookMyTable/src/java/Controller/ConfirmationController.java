@@ -5,9 +5,12 @@
  */
 package Controller;
 
+import Model.UserMenu;
 import MyPackage.MainClass;
+import Utility.UserMenuDB;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -78,6 +81,11 @@ public class ConfirmationController extends HttpServlet {
         
         if(request.getParameter("viewreservation") != null){
             request.setAttribute("message", "Reservation details");
+            String rand = request.getParameter("viewreservation");
+            UserMenuDB menu = new UserMenuDB();
+            List<UserMenu> menuByNumber = menu.getMenuByNumber(rand);
+            request.setAttribute("menuDetails", menuByNumber);
+            request.setAttribute("displayMenu", "true");
             getServletContext()
                 .getRequestDispatcher("/success.jsp")
                 .forward(request, response);
@@ -95,7 +103,7 @@ public class ConfirmationController extends HttpServlet {
             String attribute1 = (String) session.getAttribute("currentUserName");
             
             MainClass mc = new MainClass();
-            long rand = new Random().nextLong();
+            String rand = request.getParameter("verificationcode");
             mc.setTo(attribute);
             mc.initSender();
             mc.setBody("Hello "+attribute1+". \nYour reservation has been confirmed."
@@ -127,12 +135,35 @@ public class ConfirmationController extends HttpServlet {
                     + "link: http://localhost:8084/BookMyTable/ConfirmationController?verificationcode="+rand+""
                     + "\n\nThis is an auto generated mail.Please do not reply.\n\nThank you");
             mc.sendMail();
+            UserMenuDB menu = new UserMenuDB();
+            String[] menuItems = (String[]) request.getSession().getAttribute("selectedMenu");
+            for(String m : menuItems){
+                menu.addMenu(Long.toString(rand), m, 1);
+            }
             request.setAttribute("message", "Please check your email for confirmation.");
             getServletContext()
                 .getRequestDispatcher("/success.jsp")
                 .forward(request, response);
         }
-        
+        if(request.getSession().getAttribute("typeOfUser") != null && request.getParameter("attendees") != null){
+            email = (String) request.getSession().getAttribute("registeredUserEmail");
+            MainClass mc = new MainClass();
+            mc.setTo(email);
+            mc.initSender();
+            mc.setBody("Dear Customer"+" \nYour order has been confirmed."
+                    + "\nPlease login to check your menu and other reservation details"
+                    + "\n\nThis is an auto generated mail.Please do not reply.\n\nThank you");
+            mc.sendMail();
+            UserMenuDB menu = new UserMenuDB();
+            String[] menuItems = (String[]) request.getSession().getAttribute("selectedMenu");
+            for(String m : menuItems){
+                menu.addMenu(email, m, 1);
+            }
+            request.setAttribute("message", "Confirmation details are sent to your mail.");
+            getServletContext()
+                .getRequestDispatcher("/success.jsp")
+                .forward(request, response);
+        }
     }
 
     /**
