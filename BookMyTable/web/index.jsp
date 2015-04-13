@@ -10,7 +10,7 @@
 <div>
 <div class="navigate">
     <div id="navdiv">
-        <a href="#">Sign In</a>  |  <a href="order?action=others">Cart</a >  |   <a a href="#">My Orders</a>
+       <a href="order?action=others">Cart</a >  |   <a a href="#">My Orders</a>
     </div>
 </div>
 
@@ -19,8 +19,8 @@
     <div class="leftbody">
         <a id="current" href="SignInController?action=loginPage">Log in</a> <br />
         <a href="SignInController?action=signupPage">Sign Up</a> <br />
-        <a href="about.jsp">About</a> <br />
-        <a href="contactUs.jsp">Contact Us</a> <br />
+        <!-- <a href="about.jsp">About</a> <br />
+        <a href="contactUs.jsp">Contact Us</a> <br /> -->
     </div>
 </div>
 <div class="bodymain">
@@ -30,6 +30,7 @@
         <input type="hidden" value="DineIn" name="action"/>
         <input type="submit" value="Dine In" />
     </form>
+    </br>
     
     <form action="DiningController" method="POST">
         <input type="hidden" value="TakeAway" name="action"/>

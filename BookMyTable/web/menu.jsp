@@ -34,7 +34,10 @@
     <input type="checkbox" name="menuItems" value="Manchuria" />Chinese <br/>
     <input type="checkbox" name="menuItems" value="ChilliPanner" />Indian<br/>
     
+    </br>
     <input type="submit" value="Update Menu" name="update" />
+    </br>
+    </br>
     
     </form>
     <form action="MenuController" method="post">
