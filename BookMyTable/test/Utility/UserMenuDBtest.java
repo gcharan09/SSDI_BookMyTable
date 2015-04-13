@@ -5,6 +5,8 @@
  */
 package Utility;
 
+import Model.UserMenu;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -42,4 +44,26 @@ public class UserMenuDBtest {
     //
     // @Test
     // public void hello() {}
+
+    @Test
+    public void testAddMenu() {
+        System.out.println("addMenu");
+        String randNumber = "";
+        String menu = "";
+        int quantity = 0;
+        UserMenuDB instance = new UserMenuDB();
+        instance.addMenu(randNumber, menu, quantity);
+        fail("The test case is a prototype.");
+    }
+
+    @Test
+    public void testGetMenuByNumber() {
+        System.out.println("getMenuByNumber");
+        String randNumber = "";
+        UserMenuDB instance = new UserMenuDB();
+        List<UserMenu> expResult = null;
+        List<UserMenu> result = instance.getMenuByNumber(randNumber);
+        assertEquals(expResult, result);
+        fail("The test case is a prototype.");
+    }
 }
