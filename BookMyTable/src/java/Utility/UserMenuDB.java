@@ -45,10 +45,10 @@ public class UserMenuDB {
         props.put(JDBC_URL,
                 "jdbc:mysql://localhost:3306/opentable?zeroDateTimeBehavior=convertToNull");
         props.put(JDBC_USER, "root");
-        props.put(JDBC_PASSWORD, "");
+        props.put(JDBC_PASSWORD, "root");
         props.put(TARGET_SERVER, TargetServer.None);
         
-        emf = Persistence.createEntityManagerFactory("SSDI", props);
+        emf = Persistence.createEntityManagerFactory("persistence", props);
     }
     
     public void addMenu(String randNumber,String menu, int quantity){
