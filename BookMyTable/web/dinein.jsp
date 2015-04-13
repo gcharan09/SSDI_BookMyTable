@@ -7,6 +7,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="header.jsp" %>
+<%@page contentType="text/html" import="java.util.*" %>
 
 <div>
 <div class="navigate">
@@ -26,14 +27,26 @@
 </div>
 <div class="bodymain">
     <h1>"Dine in page !!"</h1>
-    <p>Please select Date and time:</p>
+    <p>Please select the Time for your Reservation: 
+        <% String timee= new java.util.Date().toString().substring(11, 16);
+            int hrs= Integer.parseInt(timee.substring(0,2));
+            int mins=Integer.parseInt(timee.substring(3, 5));
+            if(mins<30){
+                mins=30;
+            }else {
+                hrs=hrs+1;
+                mins=30;
+            }
+            String minTime=hrs+":"+mins;
+            %></p>
+    <%=minTime%>
     <form action="menu.jsp">
     <input type="text" name="date17" id="scrollDefaultExample" value="">
 			<script type="text/javascript">
                             <c:if test="${sessionScope.typeOfUser != 'RegisteredUser'}">
-				$('#scrollDefaultExample').timepicker({ 
-                                    'minTime': '9:00am',
-                                    'maxTime': '11:30pm',
+            $('#scrollDefaultExample').timepicker({ 
+                                    'minTime': "<%=minTime%>",
+                                    'maxTime': '10:30pm',
                                     'scrollDefault': 'now'
                                 });
                             </c:if>
