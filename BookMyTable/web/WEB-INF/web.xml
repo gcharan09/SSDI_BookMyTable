@@ -9,9 +9,13 @@
         <servlet-class>Controller.MenuController</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>TakeAwayController</servlet-name>
+        <servlet-class>Controller.TakeAwayController</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>ConfirmationController</servlet-name>
         <servlet-class>Controller.ConfirmationController</servlet-class>
-    </servlet>    
+    </servlet>
     <servlet>
         <servlet-name>SignInController</servlet-name>
         <servlet-class>Controller.SignInController</servlet-class>
@@ -19,6 +23,10 @@
     <servlet-mapping>
         <servlet-name>DiningController</servlet-name>
         <url-pattern>/DiningController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TakeAwayController</servlet-name>
+        <url-pattern>/TakeAwayController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MenuController</servlet-name>

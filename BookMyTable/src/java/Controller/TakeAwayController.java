@@ -59,7 +59,7 @@ public class TakeAwayController extends HttpServlet {
         String url = "/takeaway.jsp";
         String[] attribute = request.getParameterValues("menuItems");
         if(attribute != null){
-            request.getSession().setAttribute("selectedTAWMenu", attribute);
+            request.getSession().setAttribute("selectedMenu", attribute);
         }
         if(request.getParameter("confirmTAW") != null){
             String action = (String) request.getParameter("confirmTAW");

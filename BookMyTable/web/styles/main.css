@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 23, 2015, 10:25:50 AM
+    Author     : SRINEAL
+*/
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: lemonchiffon;
+}
+
+.outer {
+    width: 1000px;
+    padding-left: 12%;
+    text-align: center;
+}
+#headright {
+    float: right;
+}
+#signin {
+    float: right;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+#breadcrumb {
+    float: right;
+    padding-top: 9px;
+}
+
+.head {
+    width: 998px;
+    border: 1px solid black;
+    height: 100px;
+}
+#title{
+    width: 300px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 300px;
+    text-align: left;
+}
+#stationary{
+    float: right;
+}
+
+.navigate{
+    width: 998px;
+    border: 1px solid black;
+}
+#navdiv{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.leftbody{
+    width: 148px;
+    height: 450px;
+    border: 1px solid black;
+    float: left;
+}
+
+.bodymain{
+    width: 848px;
+    height: 450px;
+    border: 1px solid black;
+    float: right;
+    text-align: left;
+}
+
+footer{
+    float: bottom;
+    margin-top: 450px;
+    width: 998px;
+    border: 1px solid black;
+}
+#footdata{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#current{
+    color: red;
+}
+
+#categorylist{
+    padding: 10px;
+}

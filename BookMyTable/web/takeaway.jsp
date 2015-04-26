@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : menu
     Created on : Mar 26, 2015, 3:20:53 PM
@@ -18,12 +19,13 @@
     <div class="leftbody">
         <a id="current" href="SignInController?action=loginPage">Log in</a> <br />
         <a href="SignInController?action=signupPage">Sign Up</a> <br />
+        <a id="current" href="index.jsp">Home</a> <br />
     </div>
 </div>
 <div class="bodymain">
     <div style="float: left">
     <h1>"Select your Take Away Order !!"</h1>
-    <form action="MenuController" method="POST">
+    <form action="TakeAwayController" method="POST">
     <input type="checkbox" name="menuItems" value="Salad" />Salads <br/>
     <input type="checkbox" name="menuItems" value="Soup" />Soups <br/>
     <input type="checkbox" name="menuItems" value="SoftDrink" />Drinks <br/>
