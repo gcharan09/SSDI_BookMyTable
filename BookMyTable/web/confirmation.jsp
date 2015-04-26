@@ -10,7 +10,7 @@
 <div>
 <div class="navigate">
     <div id="navdiv">
-        <a href="#">Sign In</a>  |  <a href="order?action=others">Cart</a >  |   <a a href="#">My Orders</a>
+   <a href="order?action=others">Cart</a >  |   <a a href="#">My Orders</a>
     </div>
 </div>
 
@@ -18,14 +18,12 @@
 <div class="body">
     <div class="leftbody">
         <a id="current" href="SignInController?action=loginPage">Log in</a> <br />
-        <a href="SignInController?action=signupPage">Sign Up</a> <br />
-        <a href="about.jsp">About</a> <br />
-        <a href="contactUs.jsp">Contact Us</a> <br />
+        <a href="SignInController?action=signupPage">Sign Up</a>
     </div>
 </div>
 <div class="bodymain">
     <div style="float: left">
-    <h1>"Select Menu!!"</h1>
+    <h1>Enter Contact Details !!</h1>
     <form action="ConfirmationController" method="POST">
         <table>
             <c:if test="${sessionScope.typeOfUser != 'RegisteredUser'}">
@@ -62,10 +60,7 @@
             <br/> <a href="menu.jsp">Click here to edit menu</a>
             <br/> <a href="dinein.jsp">Click here to edit Time and date</a>
     </div>
-</div>
-    
-    
-    
+</div>    
 </div>
     </div>
     

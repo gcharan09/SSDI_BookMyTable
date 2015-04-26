@@ -10,7 +10,7 @@
 <div>
 <div class="navigate">
     <div id="navdiv">
-        <a href="#">Sign In</a>  |  <a href="order?action=others">Cart</a >  |   <a a href="#">My Orders</a>
+        <a href="order?action=others">Cart</a >  |   <a a href="#">My Orders</a>
     </div>
 </div>
 
@@ -19,8 +19,6 @@
     <div class="leftbody">
         <a id="current" href="home.jsp">Log in</a> <br />
         <a href="catalog">Sign Up</a> <br />
-        <a href="about.jsp">About</a> <br />
-        <a href="contactUs.jsp">Contact Us</a> <br />
     </div>
 </div>
 <div class="bodymain">
