@@ -7,6 +7,7 @@ package Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -45,9 +46,11 @@ public class DiningController extends HttpServlet {
         }
         
         
-        getServletContext()
-                .getRequestDispatcher(url)
-                .forward(request, response);
+//        getServletContext()
+//                .getRequestDispatcher(url)
+//                .forward(request, response);
+        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+        dispatcher.forward(request, response);
         
     }
 

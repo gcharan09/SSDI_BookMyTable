@@ -8,11 +8,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="header.jsp" %>
 <div>
-<div class="navigate">
-    <div id="navdiv">
-       <a href="order?action=others">Cart</a >  |   <a a href="#">My Orders</a>
-    </div>
-</div>
+
 
 <div>
 <div class="body">

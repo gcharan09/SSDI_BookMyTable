@@ -56,7 +56,7 @@ public class ConfirmationControllerTest {
         HttpServletRequest request = null;
         HttpServletResponse response = null;
         ConfirmationController instance = new ConfirmationController();
-        instance.doGet(request, response);
+        instance.doPost(request, response);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
