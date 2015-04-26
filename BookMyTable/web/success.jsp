@@ -1,4 +1,3 @@
-
 <%-- 
     Document   : success
     Created on : Mar 28, 2015, 12:47:45 PM
@@ -45,5 +44,4 @@
     
 </div>
     </div>
-    
 <%@ include file="footer.jsp" %>
