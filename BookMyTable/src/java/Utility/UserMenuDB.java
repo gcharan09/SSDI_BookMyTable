@@ -92,5 +92,21 @@ public class UserMenuDB {
         
         return resultList;
     }
+
+    public List<UserMenu> getAllMenu() {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        String qString = "SELECT u FROM UserMenu u ";
+        TypedQuery<UserMenu> q = em.createQuery(qString, UserMenu.class);
+        List<UserMenu> resultList = new ArrayList<UserMenu>();
+        try {
+            resultList = q.getResultList();
+        } catch (NoResultException ex) {
+            return null;
+        } finally {
+            em.close();
+        }
+        
+        return resultList;
+    }
     
 }

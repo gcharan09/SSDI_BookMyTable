@@ -120,10 +120,13 @@ public class ConfirmationController extends HttpServlet {
                 .getRequestDispatcher("/success.jsp")
                 .forward(request, response);
         }
-        if(request.getParameter("emailId") != null && request.getParameter("Nameofperson") != null && request.getParameter("attendees") != null){
+        if(request.getParameter("emailId") != null && request.getParameter("Nameofperson") != null){
+            if(request.getParameter("attendees") != null){
+                attendees = request.getParameter("attendees");
+            }
             email = request.getParameter("emailId");
             name = request.getParameter("Nameofperson");
-            attendees = request.getParameter("attendees");
+            
             request.getSession().setAttribute("currentUserEmail", email);
             request.getSession().setAttribute("currentUserName", name);
             MainClass mc = new MainClass();

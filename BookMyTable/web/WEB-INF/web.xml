@@ -20,6 +20,10 @@
         <servlet-name>SignInController</servlet-name>
         <servlet-class>Controller.SignInController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>Controller.AdminController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DiningController</servlet-name>
         <url-pattern>/DiningController</url-pattern>
@@ -40,11 +44,46 @@
         <servlet-name>SignInController</servlet-name>
         <url-pattern>/SignInController</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/AdminController</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
-    </session-config>    
+    </session-config>
+    <security-role>
+        <description>Admin</description>
+        <role-name>admin</role-name>
+    </security-role>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/login_error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>400</error-code>
+        <location>/login_error.jsp</location>
+    </error-page>
+    <security-constraint>
+        <!--         Restrict access to the URLs in the admin directory -->
+        <web-resource-collection>
+            <web-resource-name>Protected Area</web-resource-name>
+            <url-pattern>/Admin.jsp</url-pattern>
+        </web-resource-collection>
+        <!--         Authorize the service and programmer roles -->
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+        <!--         Forces a secure connection - remove comments to enable -->
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/AdminLogin.jsp</form-login-page>
+            <form-error-page>/login_error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>index.html</welcome-file>

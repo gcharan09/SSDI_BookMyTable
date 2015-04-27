@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="/BookMyTable"/>
+<Context antiJARLocking="true" path="/BookMyTable">
+    <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" 
+            logAbandoned="true" maxActive="100" maxIdle="30" maxWait="10000"
+ name="jdbc/murach" password="root" removeAbandoned="true" removeAbandonedTimeout="60"
+ type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/opentable?autoReconnect=true" username="root"/>
+  <Realm className="org.apache.catalina.realm.DataSourceRealm"
+ dataSourceName="jdbc/murach" debug="99" localDataSource="true"
+ roleNameCol="Rolename" userCredCol="PASSWORD" userNameCol="EMAIL"
+ userRoleTable="UserRole" userTable="registereduser"/>
+</Context>

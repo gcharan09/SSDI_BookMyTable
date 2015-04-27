@@ -12,7 +12,7 @@
 <div>
 <div class="navigate">
     <div id="navdiv">
-        <a href="order?action=others">Cart</a >  |   <a a href="#">My Orders</a>
+        <a href="order?action=others">Cart</a >  |   <a a href="#">My Orders</a>  |   <a a href="Admin.jsp">Manager</a>
     </div>
 </div>
 
